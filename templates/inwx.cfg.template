@@ -1,0 +1,5 @@
+max-log-backups = 0#
+certbot_dns_inwx:dns_inwx_url           = "{{ .Env.INWX_URL }}"
+certbot_dns_inwx:dns_inwx_username      = "{{ .Env.INWX_USERNAME }}"
+certbot_dns_inwx:dns_inwx_password      = "{{ .Env.INWX_PASSWORD }}"
+certbot_dns_inwx:dns_inwx_shared_secret = "{{ .Env.INWX_SHARED_SECRET }}"
