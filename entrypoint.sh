@@ -3,8 +3,8 @@ dockerize  -template /srv/inwx.cfg.template:/etc/letsencrypt/inwx.cfg
 chmod 0600 /etc/letsencrypt/inwx.cfg
 
 #generate domain string
-domains=`python /srv/generateDomainString.py $DOMAINS`
-echo $domains
+domains=`python /srv/scripts/generateDomainString.py $DOMAINS`
+echo "Domains: $domains"
 
 #request certificates
 certbot certonly --email $CERTBOT_INFO_MAIL \
