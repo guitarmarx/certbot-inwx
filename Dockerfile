@@ -11,9 +11,9 @@ ENV INWX_URL=https://api.domrobot.com/xmlrpc/ \
     DOCKERIZE_VERSION=v0.6.1 \
     DOMAINS="test.de,*.test.de"
 
-COPY templates/ /srv
+COPY * /srv
 COPY entrypoint.sh /srv
-COPY generateDomainString.py /srv
+COPY scripts/ /srv
 
 RUN apt update \
     && apt install --no-install-recommends -y  certbot curl tar \
