@@ -11,7 +11,7 @@ ENV INWX_URL=https://api.domrobot.com/xmlrpc/ \
     DOCKERIZE_VERSION=v0.6.1 \
     DOMAINS="test.de,*.test.de"
 
-COPY * /srv
+COPY templates/ /srv
 COPY entrypoint.sh /srv
 COPY scripts/ /srv
 
