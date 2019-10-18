@@ -3,7 +3,7 @@
 The image uses certbot to generate new certificates (including wildcard certificates) over the inwx api.
 **Requirement:** INWX Account + Domain/DNS managed by inwx
 
-Generated keys/certificates are locatated at /srv/keys inside the container
+Generated keys/certificates are locatated at /srv/certs inside the container
 
 ## Build image
 ```sh
@@ -20,7 +20,7 @@ docker run -d  \
     -e INWX_PASSWORD=<inwx password> \
     -e CERTBOT_INFO_MAIL=<cerbot info mail> \
     -e DOMAINS="<domain>,<*.domain>" \
-    -v <your cert path>:/srv/keys \
+    -v <your cert path>:/srv/certs \
     <imagename>:<version>
 ```
 

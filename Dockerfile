@@ -13,7 +13,7 @@ ENV INWX_URL=https://api.domrobot.com/xmlrpc/ \
 
 COPY templates/ /srv
 COPY entrypoint.sh /srv
-COPY scripts/ /srv
+COPY scripts /srv
 
 RUN apt update \
     && apt install --no-install-recommends -y  certbot curl tar \
@@ -24,6 +24,6 @@ RUN curl -L https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VE
     && tar -C /usr/local/bin -xzvf /tmp/dockerize.tar.gz \
     && rm /tmp/dockerize.tar.gz
 
-RUN chmod +x /srv/entrypoint.sh
+RUN chmod +x /srv/scripts/entrypoint.sh
 
-ENTRYPOINT /srv/entrypoint.sh
+ENTRYPOINT /srv/scripts/entrypoint.sh
