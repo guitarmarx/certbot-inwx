@@ -13,3 +13,6 @@ certbot certonly --email $CERTBOT_INFO_MAIL  --agree-tos  --non-interactive -a c
 if [ $? -eq 0 ]; then
     rm /etc/letsencrypt/live/README
     cp -L /etc/letsencrypt/live/*/* /srv/certs
+else
+    exit 1
+fi
