@@ -7,7 +7,7 @@ domains=`python /srv/scripts/generateDomainString.py $DOMAINS`
 echo "Domains: $domains"
 
 #request certificates
-certbot certonly --email $CERTBOT_INFO_MAIL  --agree-tos  --non-interactive -a certbot-dns-inwx:dns-inwx -d  $domains
+certbot certonly --email $CERTBOT_INFO_MAIL  --agree-tos  --non-interactive -a certbot-dns-inwx:dns-inwx  $domains
 
 
 if [ $? -eq 0 ]; then
