@@ -6,7 +6,7 @@ VOLUME /etc/letsencrypt
 ENV INWX_URL=https://api.domrobot.com/xmlrpc/ \
     INWX_USERNAME=your_username \
     INWX_PASSWORD=your_password \
-    INWX_SHARED_SECRET=""  \
+    INWX_SHARED_SECRET="<optional>"  \
     CERTBOT_INFO_MAIL=info@localhost.local \
     DOCKERIZE_VERSION=v0.6.1 \
     DOMAINS="test.de,*.test.de"
